@@ -3,9 +3,13 @@
 <head>	
 	<meta charset="utf-8">
  	<title>Tutorial: Hello Dojo!</title>
-	
-	<!-- load Dojo -->
-	<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.xd.js"></script>
+	<script src="http://www.google.com/jsapi"></script>
+	<script>
+		//google.load("jquery", "1"); //load jQuery 
+	  	//google.load("prototype", "1.6"); //load Prototype
+	  	//google.load("scriptaculous", "1.8.1"); //load Scriptaculous
+	  	google.load("dojo", "1.6.1", {uncompressed:true});
+	</script>
 	<script>
 		dojo.require("dojo.fx");
    		dojo.require('dijit.form.Button');
@@ -20,13 +24,6 @@
 			    }).play();
 		}
 
-		function shift(){
-			dojo.fx.slideTo({
-				top: 200,
-				left: 200,
-				node: dojo.byId("greeting")
-			    }).play();
-		}
 
 	    dojo.ready(init);
 
